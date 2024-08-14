@@ -116,11 +116,11 @@ class _MyAppState extends State<MyApp> {
             : FloatingActionButton(
                 backgroundColor: Colors.blue,
                 onPressed: () async {
-                // Pick an image
+
                 File? image = await _pickImage();
 
                 if (image != null) {
-                  // Upload the image to Firebase Storage
+
                   await _uploadImage(image);
                   setState(() {
                     currentPage = 1;
@@ -185,19 +185,12 @@ class CameraPageState extends State<CameraPage> {
 
   Future<void> _takePicture() async {
   try {
-    // Ensure the camera is initialized
+
     await _initializeControllerFuture;
-
-    // Attempt to take a picture and get the file
     final image = await _controller.takePicture();
-
-    // Define the file path where the image will be saved
     final imagePath = '/storage/emulated/0/Pictures/${DateTime.now().millisecondsSinceEpoch}.png';
-
-    // Save the picture permanently by copying it to the new path
     final imageFile = File(image.path);
     final savedImage = await imageFile.copy(imagePath);
-
     print('Picture saved to $imagePath');
   } catch (e) {
     print('Error: $e');
@@ -229,22 +222,17 @@ class CameraPageState extends State<CameraPage> {
 
 Future<List<String>> getAllImageUrls() async {
   try {
-    // Replace 'your-directory/' with the actual directory path where your images are stored
+
     final DirectoryReference = FirebaseStorage.instance.ref('');
-
-    // Get the list of all items (files) in the directory
     final ListResult result = await DirectoryReference.listAll();
-
-    // Initialize an empty list to store the download URLs
     List<String> imageUrls = [];
 
-    // Iterate over each file in the directory and get the download URL
     for (Reference ref in result.items) {
       final String downloadUrl = await ref.getDownloadURL();
       imageUrls.add(downloadUrl);
     }
-
     return imageUrls;
+
   } catch (e) {
     print("Error getting image URLs: $e");
     return [];
