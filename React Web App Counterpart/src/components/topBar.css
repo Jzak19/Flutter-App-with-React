@@ -1,0 +1,28 @@
+.bar {
+    padding: 1%;
+    background-color: rgb(38, 102, 222);
+    position: relative; /* Add this to allow absolute positioning of the button */
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: larger;
+    display: flex;
+    align-items: center; /* Align items vertically centered */
+    justify-content: center; /* Center text and button horizontally */
+    width: 100%;
+}
+
+.barContainer {
+    width: 100%;
+    height: 5%;
+    display: flex;
+    justify-content: center; /* Center the banner horizontally */
+    align-items: center; /* Align the banner vertically centered */
+}
+
+.logoutButtonWrapper {
+    position: absolute;
+    right: 10px; /* Adjust the position as needed */
+    top: 50%;
+    transform: translateY(-50%); /* Center the button vertically */
+}

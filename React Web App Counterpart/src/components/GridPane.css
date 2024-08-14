@@ -1,0 +1,51 @@
+.Grid{
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */      /* Optional: Adds space between items */
+    justify-content: center; /* Optional: Centers items horizontally */
+}
+
+.gridItem{
+    height:0vh;
+    display: inline;
+    padding: 2%;
+    
+}
+
+img{
+    height: 20vh;
+    width: 20vw;
+}
+
+img:hover {
+    -webkit-filter: brightness(70%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  }
+  
+  .modal p {
+    margin-bottom: 20px;
+  }
+  
+  .modal button {
+    margin-right: 10px;
+    color: black;
+    background-color: white;
+  }

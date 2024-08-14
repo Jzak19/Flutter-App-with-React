@@ -1,0 +1,44 @@
+.authBorder{
+    position: fixed;
+    background-color: white;
+    height: 70%;
+    width: 50%;
+    transform: translate(50%, 20%);
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.authTitle{
+    font-size: xx-large;
+    text-decoration: underline;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.authText{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.inputs{
+    display:block;
+}
+
+.buttonWrapper{
+    width: 100%;
+    text-align: center;
+}
+
+.additionalText{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Pushes the content to the bottom */
+    height: 50%;
+    text-align: center;
+}
+
+.errorText{
+    color: red;
+    text-align: center;
+    padding-bottom: 20px;
+}

@@ -1,0 +1,23 @@
+.input-wrapper {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the entire content horizontally */
+}
+
+.textLabel {
+    align-self: flex-start; /* Aligns the label to the left */
+    margin-bottom: 10px; /* Adds space between the label and input */
+    color: black;
+    text-decoration: none;
+    transform: translate(50%, 50%);
+    padding-bottom: 10px;
+    width: 100%; /* Makes the label span the full width of the container */
+    max-width: 50%; /* Matches the input width */
+}
+
+input {
+    height: 3vh;
+    width: 50%; /* Centers the input field and keeps it consistent with the label */
+}
+
